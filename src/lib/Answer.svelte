@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { blockAnswers, countCorrectAnswers, disableAnswerClick } from "../stores";
+	import { blockAnswers, countCorrectAnswers } from "../stores";
 
 	export let answer: string;
 	export let index: number;
@@ -13,7 +13,6 @@
 			if (answerIndex === correctIndex + 1) {
 				event.target.classList.add("bg-success");
 				countCorrectAnswers.update(s => s + 1);
-				// disableAnswerClick.update(() => true);
 				blockAnswers.update(() => true);
 			} else {
 				event.target.classList.add("bg-danger");
