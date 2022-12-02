@@ -5,9 +5,6 @@
 	export let index: number;
 	export let correctIndex: number;
 
-	$: {
-	}
-
 	const checkAnswer = (event, answerIndex: number, correctIndex: number) => {
 		if ($blockAnswers === false) {
 			if (answerIndex === correctIndex + 1) {

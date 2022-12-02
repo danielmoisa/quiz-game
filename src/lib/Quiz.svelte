@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { blockAnswers, questionIndex, quiszLength, quizs, quizStage } from "../stores";
+	import { blockAnswers, questionIndex, quiszLength, quizs, quizStage, Stage } from "../stores";
 	import Answer from "./Answer.svelte";
 
 	const handleNextQuestion = () => {
@@ -7,7 +7,7 @@
 			questionIndex.update(() => $questionIndex + 1);
 			blockAnswers.update(() => false);
 		} else {
-			quizStage.update(() => 2);
+			quizStage.update(() => Stage.RESULTS);
 		}
 	};
 </script>

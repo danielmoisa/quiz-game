@@ -2,15 +2,15 @@
 	import Quiz from "./lib/Quiz.svelte";
 	import Results from "./lib/Results.svelte";
 	import Start from "./lib/Start.svelte";
-	import { quizStage } from "./stores";
+	import { quizStage, Stage } from "./stores";
 </script>
 
 <main>
-	{#if $quizStage === 0}
+	{#if $quizStage === Stage.START}
 		<Start />
-	{:else if $quizStage === 1}
+	{:else if $quizStage === Stage.QUIZ}
 		<Quiz />
-	{:else if $quizStage === 2}
+	{:else if $quizStage === Stage.RESULTS}
 		<Results />
 	{/if}
 </main>

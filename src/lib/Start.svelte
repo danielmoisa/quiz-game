@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { quizStage } from "../stores";
+	import { quizStage, Stage } from "../stores";
 
 	const handleStartQuiz = () => {
-		quizStage.update(() => 1);
+		quizStage.update(() => Stage.QUIZ);
 	};
 </script>
 

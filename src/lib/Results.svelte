@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { countCorrectAnswers, quiszLength, quizStage, questionIndex, blockAnswers } from "../stores";
+	import { countCorrectAnswers, quiszLength, quizStage, questionIndex, blockAnswers, Stage } from "../stores";
 	const handleRestart = () => {
 		questionIndex.update(() => 1);
 		blockAnswers.update(() => false);
 		countCorrectAnswers.update(() => 0);
-		quizStage.update(() => 0);
+		quizStage.update(() => Stage.QUIZ);
 	};
 </script>
 
